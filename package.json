@@ -1,0 +1,30 @@
+{
+  "name": "game-of-life-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "func() { node --experimental-modules }; func",
+    "test": "func() { node --experimental-vm-modules node_modules/jest/bin/jest.js jest --verbose; }; func",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js jest --watch"
+  },
+  "jshintConfig": {
+    "esversion": 11
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$",
+    "transform": {}
+  },
+  "keywords": [],
+  "author": "Simon Berner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simonberner/game-of-life-js/issues"
+  },
+  "homepage": "https://github.com/simonberner/game-of-life-js#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jshint": "^2.13.6"
+  }
+}
