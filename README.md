@@ -3,11 +3,12 @@ This is a zero-player-game or so called "no-player game" because no human player
 
 ## Execution
 ### Jest-Tests
-- If you are using WebStorm as IDE, add `--experimental-vm-modules node_modules/jest/bin/jest.js jest --verbose` to the 'Node options' of the Jest-Tests run configuration and run them with that.
+- Terminal: Use `npm test` to run the tests
+- WebStorm: If you are using WebStorm as IDE, add `--experimental-vm-modules node_modules/jest/bin/jest.js jest --verbose` to the 'Node options' of the Jest-Tests run configuration and run them with that.
 
 ## Notes
 ### Implementation Driven by Tests (TDD)
-I am using TDD to drive my coding. This means:
+I am using TDD to evolve the implementation. This means:
 1. I first write one or more failing test/s
 2. Then I implement the "simplest" possible solution code till the test/s passes
 3. I refactor the solution code (till the test/s passes again)
