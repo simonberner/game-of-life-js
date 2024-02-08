@@ -2,9 +2,9 @@
   "name": "game-of-life-js",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "func() { node --experimental-modules ./src/ }; func",
+    "start": "func() { node --experimental-modules ./src/GameOfLife.js }; func",
     "test": "func() { node --experimental-vm-modules node_modules/jest/bin/jest.js jest ./tests/ --verbose; }; func",
     "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js jest ./tests/ --watch"
   },
