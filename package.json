@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "func() { node --experimental-modules }; func",
-    "test": "func() { node --experimental-vm-modules node_modules/jest/bin/jest.js jest --verbose; }; func",
-    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js jest --watch"
+    "start": "func() { node --experimental-modules ./src/ }; func",
+    "test": "func() { node --experimental-vm-modules node_modules/jest/bin/jest.js jest ./tests/ --verbose; }; func",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js jest ./tests/ --watch"
   },
   "jshintConfig": {
     "esversion": 11
