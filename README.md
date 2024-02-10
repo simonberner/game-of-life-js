@@ -1,12 +1,25 @@
 # [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
-This is a zero-player-game or so called "no-player game" because no human players are actively involved in "playing" it.
+## Description
+This is a zero-player-game or so called "no-player game" because no human players are actively involved in playing it.
 
-## Execution
+## Tech Stack
+- Vanilla JavaScript
+- Jest
+- JSHint
+
+## Design
+tbd
+
+## Features
+tbd
+
+## How to run
 ### Jest-Tests
-- Terminal: Use `npm test` to run the tests
+- Use `npm test` to run the tests
+- Use `npm run test:watch` to enable the Jest watch mode to run all the tests
 - WebStorm: If you are using WebStorm as IDE, add `--experimental-vm-modules node_modules/jest/bin/jest.js jest --verbose` to the 'Node options' of the Jest-Tests run configuration and run them with that.
 
-## Notes
+## Approach
 ### Implementation Driven by Tests (TDD)
 I am using TDD to evolve the implementation. This means:
 1. I first write one or more failing test/s
