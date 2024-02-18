@@ -1,4 +1,4 @@
-import { calcNextGen } from "../src/GameOfLife";
+import {calcNextGen} from "../src/GameOfLife";
 
 let emptyUniverse = new Set();
 
@@ -10,7 +10,7 @@ describe('calcNextGen with an empty universe', () => {
 });
 
 // 2 dimensions coordinates=: row, column
-let universeWithABlock = new Set([1,1], [1,2], [2,1], [2,2]);
+let universeWithABlock = new Set([1, 1], [1, 2], [2, 1], [2, 2]); // see https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 // #2: Still Lifes - Block
 describe("calcNextGen with a Block", () => {
     it('should return a universe with a Block.', () => {
