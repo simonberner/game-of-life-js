@@ -17,3 +17,12 @@ describe("calcNextGen with a Block", () => {
         expect(calcNextGen(universeWithABlock)).toEqual(universeWithABlock);
     });
 })
+
+// #3: Oscillators - Blinker (period 2)
+let universeWithABlinkerPeriod1 = new Set([1, 2], [2, 2], [3, 2]);
+let universeWithABlinkerPeriod2 = new Set([2, 1], [2, 2], [2, 3]);
+describe("calcNextGen with a Blinker period 1 (vertical)", () => {
+    it('should return a universe with a Blinker period 2 (horizontal).', () => {
+        expect(calcNextGen(universeWithABlinkerPeriod1)).toEqual(universeWithABlinkerPeriod2);
+    });
+})
