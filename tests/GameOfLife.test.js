@@ -11,14 +11,14 @@ describe('calcNextGen with an empty universe', () => {
 
 // 2 dimensions coordinates=: row, column
 let universeWithABlock = new Set([1, 1], [1, 2], [2, 1], [2, 2]); // see https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
-// #2: Still Lifes - Block
+// #2: Pattern type: Still Lifes - Block
 describe("calcNextGen with a Block", () => {
     it('should return a universe with a Block.', () => {
         expect(calcNextGen(universeWithABlock)).toEqual(universeWithABlock);
     });
 })
 
-// #3: Oscillators - Blinker (period 2)
+// #3: Pattern type: Oscillators - Blinker (period 2)
 let universeWithABlinkerPeriod1 = new Set([1, 2], [2, 2], [3, 2]);
 let universeWithABlinkerPeriod2 = new Set([2, 1], [2, 2], [2, 3]);
 describe("calcNextGen with a Blinker period 1 (vertical)", () => {
