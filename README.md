@@ -1,6 +1,6 @@
 # [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 ## Description
-This is a zero-player-game or so called "no-player game" because no human players are actively involved in playing it.
+This is a zero-player-game, a so called "no-player game" or simulation because no human players are actively involved in playing it.
 
 ## Tech Stack
 - Vanilla JavaScript
@@ -11,7 +11,10 @@ This is a zero-player-game or so called "no-player game" because no human player
 tbd
 
 ## Features
-tbd
+### Rules
+1. A dead cell will come alive if exactly 3 neighbours are living.
+2. A living cell will stay alive if 2 or 3 neighbours are living.
+3. Cells with less than 2 neighbours will die of underpopulation, cells with 4 or more neighbours will die of overpopulation.
 
 ## How to run
 ### Jest-Tests
