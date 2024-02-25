@@ -18,9 +18,17 @@ describe("calcNextGen with a Block", () => {
     });
 })
 
-// #3: Pattern type: Oscillators - Blinker (period 2)
-let universeWithABlinkerPeriod1 = new Set([1, 2], [2, 2], [3, 2]);
-let universeWithABlinkerPeriod2 = new Set([2, 1], [2, 2], [2, 3]);
+// #3: Pattern type Oscillators: Blinker
+// x
+// x
+// x
+let universeWithABlinkerPeriod1 = new Set(
+    [1, 1],
+    [2, 1],
+    [3, 2]
+);
+// x x x
+let universeWithABlinkerPeriod2 = new Set([2, 0], [2, 1], [2, 2]);
 describe("calcNextGen with a Blinker period 1 (vertical)", () => {
     it('should return a universe with a Blinker period 2 (horizontal).', () => {
         expect(calcNextGen(universeWithABlinkerPeriod1)).toEqual(universeWithABlinkerPeriod2);
