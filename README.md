@@ -11,10 +11,12 @@ This is a zero-player-game, a so called "no-player game" or simulation because n
 tbd
 
 ## Features
+Each cell has 8 neighbours, except for the ones at the edge of the canvas.
 ### Rules
 1. A dead cell will come alive if exactly 3 neighbours are living.
 2. A living cell will stay alive if 2 or 3 neighbours are living.
-3. Cells with less than 2 neighbours will die of underpopulation, cells with 4 or more neighbours will die of overpopulation.
+3. A living cell with less than 2 neighbours will die of underpopulation
+4. A living cell with 4 or more neighbours will die of overpopulation.
 
 ## How to run
 ### Jest-Tests
