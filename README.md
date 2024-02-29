@@ -18,6 +18,10 @@ Each cell has 8 neighbours, except for the ones at the edge of the canvas.
 3. A living cell with less than 2 neighbours will die of underpopulation
 4. A living cell with 4 or more neighbours will die of overpopulation.
 
+In short this means:  
+0 -> 3 live neighbours -> 1 (A dead cell will come alive if exactly 3 neighbours are living.)  
+1 -> <2 live neighbours || >3 live neighbours -> 0 (A living cell with less than 2 or more than 3 living neighbours dies.)
+
 ## How to run
 ### Jest-Tests
 - Use `npm test` to run the tests
