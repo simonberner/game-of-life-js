@@ -4,8 +4,11 @@ This is a zero-player-game, a so called "no-player game" or simulation because n
 
 ## Tech Stack
 - Vanilla JavaScript
-- Jest
-- JSHint
+### devDependencies
+- [Jest](https://jestjs.io/) (for Testing)
+- [JSHint](https://jshint.com/) (for code quality)
+### dependencies
+- [p5](https://p5js.org/) (for drawing)
 
 ## Design
 tbd
