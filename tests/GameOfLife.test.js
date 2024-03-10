@@ -1,11 +1,11 @@
 import {calcNextGen, makeEmpty2DArray} from "../src/GameOfLife";
 
-let emptyUniverse = new Set();
+let emptyUniverse = makeEmpty2DArray(6, 6)
 
 // #1
 describe('calcNextGen with an empty universe', () => {
     it('should return an empty universe.', () => {
-        expect(calcNextGen(emptyUniverse)).toEqual(new Set());
+        expect(calcNextGen(emptyUniverse)).toEqual(emptyUniverse);
     });
 });
 
