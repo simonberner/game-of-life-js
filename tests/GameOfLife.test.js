@@ -1,7 +1,7 @@
 import {calcNextGen, makeEmpty2DArray} from "../src/GameOfLife";
 
 
-// #1:
+// #1: An empty universe stays an empty universe
 let emptyUniverse = makeEmpty2DArray(6, 6)
 describe('calcNextGen with an empty universe', () => {
     it('should return an empty universe.', () => {
@@ -19,8 +19,8 @@ describe("calcNextGen with a Block", () => {
 })
 
 // #3: Pattern type Oscillators: Blinker
-let universeWithABlinkerPeriod1 = setupBlinkerPeriod1Universe();
-let universeWithABlinkerPeriod2 = setupBlinkerPeriod2Universe();
+let universeWithABlinkerPeriod1 = getBlinkerPeriod1Universe();
+let universeWithABlinkerPeriod2 = getBlinkerPeriod2Universe();
 describe("calcNextGen with a Blinker period 1 (vertical)", () => {
     it('should return a universe with a Blinker period 2 (horizontal).', () => {
         expect(calcNextGen(universeWithABlinkerPeriod1)).toEqual(universeWithABlinkerPeriod2);
@@ -43,8 +43,7 @@ function getUniverseWithABlock() {
     return universe;
 }
 
-// i: columns, j: rows
-function setupBlinkerPeriod1Universe() {
+function getBlinkerPeriod1Universe() {
     let cols = 6;
     let rows = 6;
     let universe = makeEmpty2DArray(cols, rows);
@@ -60,7 +59,7 @@ function setupBlinkerPeriod1Universe() {
     return universe;
 }
 
-function setupBlinkerPeriod2Universe() {
+function getBlinkerPeriod2Universe() {
     let cols = 6;
     let rows = 6;
     let universe = makeEmpty2DArray(cols, rows);
