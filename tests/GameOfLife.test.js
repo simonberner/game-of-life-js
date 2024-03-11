@@ -1,18 +1,17 @@
 import {calcNextGen, makeEmpty2DArray} from "../src/GameOfLife";
 
-let emptyUniverse = makeEmpty2DArray(6, 6)
 
-// #1
+// #1:
+let emptyUniverse = makeEmpty2DArray(6, 6)
 describe('calcNextGen with an empty universe', () => {
     it('should return an empty universe.', () => {
         expect(calcNextGen(emptyUniverse)).toEqual(emptyUniverse);
     });
 });
 
-// 2 dimensions coordinates=: row, column
-let universeWithABlock = getUniverseWithABlock();
 // #2: Pattern type: Still Lifes - Block
 // see https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+let universeWithABlock = getUniverseWithABlock();
 describe("calcNextGen with a Block", () => {
     it('should return a universe with a Block.', () => {
         expect(calcNextGen(universeWithABlock)).toEqual(universeWithABlock);
