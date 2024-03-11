@@ -1,3 +1,9 @@
+/**
+ * Calculates the next generation of the given universe based on the rules of Conway's Game of Life.
+ *
+ * @param {number[][]} initialUniverse - The initial state of the universe represented as a 2D array of numbers.
+ * @returns {number[][]} - The next generation of the universe represented as a 2D array of numbers.
+ */
 function calcNextGen(initialUniverse) {
     let cols = initialUniverse[0].length;
     let rows = initialUniverse[1].length;
@@ -26,7 +32,13 @@ function calcNextGen(initialUniverse) {
     return nextUniverse;
 }
 
-// Make an empty 2D Array
+/**
+ * Creates an empty 2D array with the specified number of columns and rows.
+ *
+ * @param {number} cols - The number of columns in the array.
+ * @param {number} rows - The number of rows in the array.
+ * @returns {any[]} - The empty 2D array.
+ */
 function makeEmpty2DArray(cols, rows) {
     let arr = new Array(cols);
     for (let i = 0; i < arr.length; i++) {
@@ -35,8 +47,15 @@ function makeEmpty2DArray(cols, rows) {
     return arr;
 }
 
-// A cell has 8 neighbours
-// x(column), y(row): coordinates of the cell we are looking at
+/**
+ * Counts the number of live neighbors for a given cell in the initial universe.
+ * (A cell has 8 neighbours)
+ *
+ * @param {number[][]} initialUniverse - The initial universe grid.
+ * @param {number} x - The x-coordinate of the cell.
+ * @param {number} y - The y-coordinate of the cell.
+ * @returns {number} - The number of live neighbors for the given cell.
+ */
 function countLiveNeighbours(initialUniverse, x, y) {
     let cols = initialUniverse[0].length;
     let rows = initialUniverse[1].length;
