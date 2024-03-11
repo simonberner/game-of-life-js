@@ -14,7 +14,7 @@ This is a zero-player-game, a so called "no-player game" or simulation because n
 tbd
 
 ## Features
-Each cell has 8 neighbours, except for the ones at the edge of the canvas.
+Each cell has 8 neighbours, even the ones at the edge of the universe.
 ### Rules
 1. A dead cell will come alive if exactly 3 neighbours are living.
 2. A living cell will stay alive if 2 or 3 neighbours are living.
@@ -22,8 +22,12 @@ Each cell has 8 neighbours, except for the ones at the edge of the canvas.
 4. A living cell with 4 or more neighbours will die of overpopulation.
 
 In short this means:  
-0 -> 3 live neighbours -> 1 (A dead cell will come alive if exactly 3 neighbours are living.)  
-1 -> <2 live neighbours || >3 live neighbours -> 0 (A living cell with less than 2 or more than 3 living neighbours dies.)
+- 0 -> 3 live neighbours -> 1 (A dead cell will come alive if exactly 3 neighbours are living.)  
+- 1 -> <2 live neighbours || >3 live neighbours -> 0 (A living cell with less than 2 or more than 3 living neighbours dies.)
+
+## Definitions
+- universe: 2D grid
+- 2D grid: consists of columns x and rows y
 
 ## How to run
 ### Jest-Tests
@@ -43,3 +47,7 @@ I am using TDD to evolve the implementation. This means:
 - Consider [the following](https://jestjs.io/docs/ecmascript-modules) when running Jest in combination with JavaScript modules.
 #### Script: `test:watch`
 The `--watch` option is used to enable Jest's watch mode. When you run Jest with the `--watch` flag, it sets up a persistent process that watches for changes in your project files.
+
+## Learnings
+- In TDD I still struggle with the step: *Then I implement the "simplest" possible solution code till the test/s passes.* Implementing a first bunch of basic tests can be quite simple and straight forward but
+as things move on we need to add more logic in a higher dose. Not rushing ahead in that moment is crucial.
