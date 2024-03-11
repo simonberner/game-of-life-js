@@ -10,8 +10,9 @@ describe('calcNextGen with an empty universe', () => {
 });
 
 // 2 dimensions coordinates=: row, column
-let universeWithABlock = new Set([1, 1], [1, 2], [2, 1], [2, 2]); // see https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+let universeWithABlock = getUniverseWithABlock();
 // #2: Pattern type: Still Lifes - Block
+// see https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 describe("calcNextGen with a Block", () => {
     it('should return a universe with a Block.', () => {
         expect(calcNextGen(universeWithABlock)).toEqual(universeWithABlock);
@@ -26,6 +27,22 @@ describe("calcNextGen with a Blinker period 1 (vertical)", () => {
         expect(calcNextGen(universeWithABlinkerPeriod1)).toEqual(universeWithABlinkerPeriod2);
     });
 })
+
+function getUniverseWithABlock() {
+    let cols = 4;
+    let rows = 4;
+    let universe = makeEmpty2DArray(cols, rows);
+    for (let i = 0; i < cols; i++) {
+        for (let j = 0; j < rows; j++) {
+            if ((i === 1 || i === 2) && (j === 1 || j === 2)) {
+                universe[i][j] = 1;
+            } else {
+                universe[i][j] = 0;
+            }
+        }
+    }
+    return universe;
+}
 
 // i: columns, j: rows
 function setupBlinkerPeriod1Universe() {
