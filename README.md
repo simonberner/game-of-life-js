@@ -1,6 +1,43 @@
-# [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
-## Description
+# [](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+<h1 align=center>Conway's Game of Life</h1>
+
+<p align="center">
+    <a href="https://nodejs.org">
+        <img src="https://img.shields.io/badge/node-20.11.0+-blue.svg?style=for-the-badge" />
+    </a>
+    <a href="https://jestjs.io/">
+        <img src="https://img.shields.io/badge/jest-29.7.0-brightgreen.svg?style=for-the-badge" />
+    </a>
+    <a href="https://jshint.com/">
+        <img src="https://img.shields.io/badge/jshint-2.13.6-brightgreen.svg?style=for-the-badge" />
+    </a>
+    <a href="https://p5js.org/">
+        <img src="https://img.shields.io/badge/p5js-1.9.1-brightgreen.svg?style=for-the-badge" />
+    </a>
+    <a href="https://twitter.com/simonbernerdev">
+        <img src="https://img.shields.io/badge/Contact-@simonbernerdev-orange?style=for-the-badge" alt="Twitter: @simonbernerdev" />
+    </a>
+    <a href="https://gitmoji.dev">
+        <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=for-the-badge" alt="Gitmoji">
+    </a>
+    <a href="https://opensource.org/licenses/MIT">
+        <img src="https://img.shields.io/badge/license-MIT-black.svg?style=for-the-badge" />
+    </a>
+</p>
+
 This is a zero-player-game, a so called "no-player game" or simulation because no human players are actively involved in playing it.
+
+---
+## Contents
+* [Tech Stack](#tech-stack)
+* [Design](#design)
+* [Features](#features)
+* [Definitions](#definitions)
+* [How to run](#how-to-run)
+* [Approach](#approach)
+* [Learnings](#learnings)
+* [Resources](#resources)
+---
 
 ## Tech Stack
 - Vanilla JavaScript
@@ -11,7 +48,7 @@ This is a zero-player-game, a so called "no-player game" or simulation because n
 - [p5](https://p5js.org/) (for drawing)
 
 ## Design
-tbd
+No idea what to put here.
 
 ## Features
 Each cell has 8 neighbours, even the ones at the edge of the universe.
@@ -27,13 +64,15 @@ In short this means:
 
 ## Definitions
 - universe: 2D grid
-- 2D grid: consists of columns x and rows y
+- 2D grid: consists of columns `x` and rows `y`
 
 ## How to run
 ### Jest-Tests
 - Use `npm test` to run the tests
 - Use `npm run test:watch` to enable the Jest watch mode to run all the tests
 - WebStorm: If you are using WebStorm as IDE, add `--experimental-vm-modules node_modules/jest/bin/jest.js jest --verbose` to the 'Node options' of the Jest-Tests run configuration and run them with that.
+### Visualisation
+You see a visual representation of the game running in an endless-loop [on this page here](https://simonberner.github.io/game-of-life-js/). If you want to trigger a fresh initial start of the game, reload the page in the browser.
 
 ## Approach
 ### Implementation Driven by Tests (TDD)
@@ -49,5 +88,27 @@ I am using TDD to evolve the implementation. This means:
 The `--watch` option is used to enable Jest's watch mode. When you run Jest with the `--watch` flag, it sets up a persistent process that watches for changes in your project files.
 
 ## Learnings
+### TDD
 - In TDD I still struggle with the step: *Then I implement the "simplest" possible solution code till the test/s passes.* Implementing a first bunch of basic tests can be quite simple and straight forward but
 as things move on we need to add more logic in a higher dose. Not rushing ahead in that moment is crucial.
+### p5js
+- p5.min.js: basic library for the processing.
+- p5.dom.min.js: this library is specifically focusing on HTML manipulations and interactions. It provides a simple way to interact with HTML5 objects, such as the canvas, video, audio, and more.
+- p5.sound.min.js: is an extension library that provides web audio functionality for the p5.js library, which is a JavaScript library for creative coding. The p5.sound library expands upon the Web
+Audio API and includes features such as audio input, playback, analysis, synthesis, sequencing, scheduling, effects, recording, and more.
+
+## Resources
+- [cdnjs](https://cdnjs.com/libraries/p5.js)
+- [p5js](https://p5js.org/)
+- [Creating a Local p5.js Project](https://www.codecademy.com/article/p5js-creating-a-local-project)
+- [Learn p5.js: Fundamentals](https://www.codecademy.com/learn/learn-p5js-fundamentals)
+- [p5.js Tutorial (geeksforgeeks)](https://www.geeksforgeeks.org/p5-js/?ref=lbp)
+
+<hr>
+<p align="center">
+Made with a 🙂 by <a href="https://simonberner.dev">Simon Berner
+</p>
+
+<p align="center">
+<a href="https://www.buymeacoffee.com/simonberner" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+</p>
