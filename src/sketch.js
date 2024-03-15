@@ -6,6 +6,7 @@ let initialUniverse;
 let resolution = 10;
 let birdsong;
 let playButton;
+let volumeSlider;
 
 /**
  * Preload function is used to preload any necessary assets before the setup() is called. It is called once.
@@ -35,9 +36,12 @@ function setup() {
     // draw and position the button
     playButton = createButton('Start/Stop sound');
     playButton.position(0, 500);
-
     // call playSound when play button clicked
     playButton.mousePressed(playSound);
+
+    // create volume slider
+    volumeSlider = createSlider(0, 1, 0.5, 0);
+    volumeSlider.position(120, 500);
 
     // set playback mode to 'restart'
     birdsong.playMode('restart');
@@ -71,6 +75,9 @@ function draw() {
         }
     }
     initialUniverse = calcNextGen(initialUniverse);
+
+    // Set volume for the birdsong
+    birdsong.setVolume(volumeSlider.value());
 }
 
 function playSound() {
