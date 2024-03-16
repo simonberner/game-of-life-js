@@ -3,7 +3,7 @@
 
 <p align="center">
     <a href="https://nodejs.org">
-        <img src="https://img.shields.io/badge/node-20.11.0+-blue.svg?style=for-the-badge" />
+        <img src="https://img.shields.io/badge/node-20,11+-blue.svg?style=for-the-badge" />
     </a>
     <a href="https://jestjs.io/">
         <img src="https://img.shields.io/badge/jest-29.7.0-brightgreen.svg?style=for-the-badge" />
@@ -92,17 +92,21 @@ The `--watch` option is used to enable Jest's watch mode. When you run Jest with
 - In TDD I still struggle with the step: *Then I implement the "simplest" possible solution code till the test/s passes.* Implementing a first bunch of basic tests can be quite simple and straight forward but
 as things move on we need to add more logic in a higher dose. Not rushing ahead in that moment is crucial.
 ### p5js
+- In the sketch.js, we provide our own implementations of the p5js functions that define how the sketch should setup, update, and optionally preload assets. This is not so much overriding (as in object-oriented programming)
+as it is defining these functions for p5.js to use. Then we need to assign the functions to the global window object to ensure they are properly recognized by the p5.js library.
 - p5.min.js: basic library for the processing.
 - p5.dom.min.js: this library is specifically focusing on HTML manipulations and interactions. It provides a simple way to interact with HTML5 objects, such as the canvas, video, audio, and more.
 - p5.sound.min.js: is an extension library that provides web audio functionality for the p5.js library, which is a JavaScript library for creative coding. The p5.sound library expands upon the Web
 Audio API and includes features such as audio input, playback, analysis, synthesis, sequencing, scheduling, effects, recording, and more.
 
 ## Resources
+- [p5.js Reference](https://p5js.org/reference/)
 - [cdnjs](https://cdnjs.com/libraries/p5.js)
 - [p5js](https://p5js.org/)
 - [Creating a Local p5.js Project](https://www.codecademy.com/article/p5js-creating-a-local-project)
 - [Learn p5.js: Fundamentals](https://www.codecademy.com/learn/learn-p5js-fundamentals)
 - [p5.js Tutorial (geeksforgeeks)](https://www.geeksforgeeks.org/p5-js/?ref=lbp)
+- [Sound manipulation in p5.js](https://www.nicholasbrown.co.uk/tutorial/sound-manipulation-in-the-browser-with-p5js.html)
 
 <hr>
 <p align="center">
