@@ -73,13 +73,13 @@ function generateRandomBinary() {
  * @returns {number} - The number of live neighbors for the given cell.
  */
 function countLiveNeighbours(initialUniverse, x, y) {
-    let cols = initialUniverse[0].length;
-    let rows = initialUniverse[1].length;
+    let numColumns = initialUniverse[0].length;
+    let numRows = initialUniverse[1].length;
     let count = 0;
     for (let i = -1; i < 2; i++) {
         for (let j = -1; j < 2; j++) {
-            let col = (x + i + cols) % cols; // around the edges
-            let row = (y + j + rows) % rows; // around the edges
+            let col = (x + i + numColumns) % numColumns; // around the edges
+            let row = (y + j + numRows) % numRows; // around the edges
             count += initialUniverse[col][row];
         }
     }
