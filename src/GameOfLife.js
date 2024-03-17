@@ -55,16 +55,16 @@ function makeEmpty2DArray(cols, rows) {
  * @returns {any[]} - A 2D array filled with random values of 0 or 1.
  */
 function makeRandom2DArray(cols, rows) {
-    let arr = new Array(cols);
-    for (let i = 0; i < arr.length; i++) {
-        arr[i] = new Array(rows);
-        for (let j = 0; j < arr[i].length; j++) {
-            // set the each value in the arr randomly to 0 or 1 (eg 0.2 *2 + 0.4 -> 0 / 0.6 * 2 = 1.2 -> 1)
-            let randomValue = Math.floor(Math.random() * 2)
-            arr[i][j] = randomValue
-        }
-    }
-    return arr;
+    return Array.from({length: cols}, () => Array.from({length: rows}, generateRandomBinary));
+}
+
+/**
+ * Generates a binary number (0 or 1).
+ *
+ * @returns {number} - A random binary number (0 or 1).
+ */
+function generateRandomBinary() {
+    return Math.floor(Math.random() * 2);
 }
 
 /**
