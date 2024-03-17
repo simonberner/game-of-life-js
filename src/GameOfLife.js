@@ -12,24 +12,28 @@ function calcNextGen(initialUniverse) {
     // Compute nextUniverse based on the initialUniverse
     for (let i = 0; i < cols; i++) {
         for (let j = 0; j < rows; j++) {
-            // Current state of the cell
-            let currentState = initialUniverse[i][j];
-            // Count live neighbors of the cell
-            let liveNeighbors = countLiveNeighbours(initialUniverse, i, j);
-
-            // Rule: A dead cell will come alive if exactly 3 neighbours are living.
-            if (currentState === 0 && liveNeighbors === 3) {
-                nextUniverse[i][j] = 1
-                // Rule: A living cell with less than 2 or more than 3 living neighbours dies.
-            } else if (currentState === 1 && (liveNeighbors < 2 || liveNeighbors > 3)) {
-                nextUniverse[i][j] = 0
-                // Rule: In all the other cases the cell keeps its current state
-            } else {
-                nextUniverse[i][j] = currentState
-            }
+            nextUniverse[i][j] = calculateNextCellState(initialUniverse, i, j);
         }
     }
     return nextUniverse;
+}
+
+function calculateNextCellState(initialUniverse, x, y) {
+    let currentState = initialUniverse[x][y];
+    let liveNeighbors = countLiveNeighbours(initialUniverse, x, y);
+    let deadCellRevives = currentState === 0 && liveNeighbors === 3;
+    let liveCellDies = currentState === 1 && (liveNeighbors < 2 || liveNeighbors > 3)
+
+    // Rule: A dead cell will come alive if exactly 3 neighbours are living.
+    if (deadCellRevives) {
+        return 1;
+        // Rule: A living cell with less than 2 or more than 3 living neighbours dies.
+    } else if (liveCellDies) {
+        return 0;
+        // Rule: In all the other cases the cell keeps its current state
+    } else {
+        return currentState;
+    }
 }
 
 /**
