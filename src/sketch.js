@@ -41,7 +41,7 @@ function setup() {
 
     // create volume slider
     volumeSlider = createSlider(0, 1, 0.5, 0);
-    volumeSlider.position(120, 500);
+    volumeSlider.position(200, 520);
 
     // set playback mode to 'restart'
     birdsong.playMode('restart');
