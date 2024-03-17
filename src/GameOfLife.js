@@ -40,11 +40,7 @@ function calcNextGen(initialUniverse) {
  * @returns {any[]} - The empty 2D array.
  */
 function makeEmpty2DArray(cols, rows) {
-    let arr = new Array(cols);
-    for (let i = 0; i < arr.length; i++) {
-        arr[i] = new Array(rows);
-    }
-    return arr;
+    return Array.from({length: cols}, () => Array.from({length: rows}));
 }
 
 /**
