@@ -1,7 +1,24 @@
 html, body {
-  margin: 1px;
-  padding: 1px;
+    margin: 1px;
+    padding: 1px;
 }
+
 canvas {
-  display: block;
+    display: block;
+}
+
+button {
+    background-color: darkseagreen;
+    border: 2px solid #0099CC; /* Border thickness, line style, and color */
+    border-radius: 70px; /* Adds curve to border corners */
+    text-decoration: none;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
