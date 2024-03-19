@@ -54,7 +54,8 @@ function setup() {
  * Right after the setup function, the draw function is called continuously until the program is stopped or noLoop() is called.
  * The draw function is refreshed according to the frame rate (defined by the frameRate() function,
  * 60 FPS by default).
- * (https://p5js.org/reference/#/p5/draw)
+ * (draw: https://p5js.org/reference/#/p5/draw)
+ * (fill: https://p5js.org/reference/#/p5/fill)
  *
  * @returns {void}
  */
@@ -66,9 +67,9 @@ function draw() {
         for (let j = 0; j < columns; j++) {
             let x = j * resolution;
             let y = i * resolution;
-            // Fill a living cell with black (255)
+            // Draw a living cell as a rectangle with stroke black and fill it with green
             if (initialUniverse[i][j] === 1) {
-                fill(255);
+                fill('rgb(0,255,0)');
                 stroke(0);
                 rect(x, y, resolution, resolution);
             }
