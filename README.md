@@ -1,18 +1,17 @@
-# [](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 <h1 align=center>Conway's Game of Life</h1>
 
 <p align="center">
     <a href="https://nodejs.org">
-        <img src="https://img.shields.io/badge/node-20,11+-blue.svg?style=for-the-badge" />
+        <img src="https://img.shields.io/badge/node-20.11+-blue.svg?style=for-the-badge" />
     </a>
     <a href="https://jestjs.io/">
-        <img src="https://img.shields.io/badge/jest-29.7.0-brightgreen.svg?style=for-the-badge" />
+        <img src="https://img.shields.io/badge/jest-29.7+-brightgreen.svg?style=for-the-badge" />
     </a>
     <a href="https://jshint.com/">
-        <img src="https://img.shields.io/badge/jshint-2.13.6-brightgreen.svg?style=for-the-badge" />
+        <img src="https://img.shields.io/badge/jshint-2.13+-brightgreen.svg?style=for-the-badge" />
     </a>
     <a href="https://p5js.org/">
-        <img src="https://img.shields.io/badge/p5js-1.9.1-brightgreen.svg?style=for-the-badge" />
+        <img src="https://img.shields.io/badge/p5js-1.9+-brightgreen.svg?style=for-the-badge" />
     </a>
     <a href="https://twitter.com/simonbernerdev">
         <img src="https://img.shields.io/badge/Contact-@simonbernerdev-orange?style=for-the-badge" alt="Twitter: @simonbernerdev" />
@@ -25,7 +24,7 @@
     </a>
 </p>
 
-This is a zero-player-game, a so called "no-player game" or simulation because no human players are actively involved in playing it.
+This is a zero-player-game, a so called "no-player game" or simulation because no human players are actively involved in playing it. [Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
 ---
 ## Contents
@@ -48,7 +47,7 @@ This is a zero-player-game, a so called "no-player game" or simulation because n
 - [p5](https://p5js.org/) (for drawing)
 
 ## Design
-No idea what to put here.
+<No idea what to put here>
 
 ## Features
 Each cell has 8 neighbours, even the ones at the edge of the universe.
@@ -96,8 +95,7 @@ as things move on we need to add more logic in a higher dose. Not rushing ahead 
 as it is defining these functions for p5.js to use. Then we need to assign the functions to the global window object to ensure they are properly recognized by the p5.js library.
 - p5.min.js: basic library for the processing.
 - p5.dom.min.js: this library is specifically focusing on HTML manipulations and interactions. It provides a simple way to interact with HTML5 objects, such as the canvas, video, audio, and more.
-- p5.sound.min.js: is an extension library that provides web audio functionality for the p5.js library, which is a JavaScript library for creative coding. The p5.sound library expands upon the Web
-Audio API and includes features such as audio input, playback, analysis, synthesis, sequencing, scheduling, effects, recording, and more.
+- p5.sound.min.js: is an extension library that provides web audio functionality for the p5.js library. The p5.sound library expands upon the Web Audio API and includes features such as audio input, playback, analysis, synthesis, sequencing, scheduling, effects, recording, and more.
 
 ## Resources
 - [p5.js Reference](https://p5js.org/reference/)
